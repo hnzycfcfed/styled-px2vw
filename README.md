@@ -1,9 +1,10 @@
 # styled-px2vw ✨
-[![npm Version](https://img.shields.io/npm/v/styled-px2vw.svg)](https://www.npmjs.com/package/styled-px2vw)
 [![Build Status](https://img.shields.io/travis/sergeybekrin/styled-px2vw.svg)](https://travis-ci.org/sergeybekrin/styled-px2vw)
+[![npm Version](https://img.shields.io/npm/v/styled-px2vw.svg)](https://www.npmjs.com/package/styled-px2vw)
+[![NPM Downloads](https://img.shields.io/npm/dm/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
 [![dependencies Status](https://img.shields.io/david/sergeybekrin/styled-px2vw.svg)](https://david-dm.org/sergeybekrin/styled-px2vw)
 [![devDependencies Status](https://img.shields.io/david/dev/sergeybekrin/styled-px2vw.svg)](https://david-dm.org/sergeybekrin/styled-px2vw?type=dev)
-<br>
+
 Extension of [styled-components](https://www.styled-components.com/) with features for convert px to vw units. <br>
 See the documentation at [styled-components.com/docs](https://www.styled-components.com/docs) for more information about using styled-components!
 
@@ -78,3 +79,9 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 ```
+
+## License
+
+Licensed under the MIT License, Copyright © 2018-present hnzycfc.com, https://www.hnzycfc.com/
+
+See [LICENSE](./LICENSE) for more information.

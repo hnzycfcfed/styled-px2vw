@@ -11,12 +11,15 @@
     },
     "author": "Daniel Zhao",
     "keywords": [
-        "px2vw",
-        "styled-px2vw",
-        "styled-components",
         "react",
+        "css-in-js",
+        "styled-components",
+        "px2vw",
+        "px-to-vw",
+        "styled-px2vw",
+        "css",
         "frontend"
-      ],
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/hnzycfcfed/styled-px2vw"

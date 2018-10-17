@@ -30,13 +30,19 @@ const convertInterpolationPx2vw = interpolation => {
     };
 };
 
-const withCss = styled => (strings, ...interpolations) => {
+const withCss = styled => {
+    const interleave = (strings, ...interpolations) => {
 
-    strings = strings.map(convertStringPx2vw);
+        strings = strings.map(convertStringPx2vw);
 
-    interpolations = interpolations.map(convertInterpolationPx2vw);
+        interpolations = interpolations.map(convertInterpolationPx2vw);
 
-    return styled(strings, ...interpolations);
+        return styled(strings, ...interpolations);
+    }
+
+    Object.keys(styled).forEach(prop => interleave[prop] = styled[prop]);
+
+    return interleave;
 };
 
 const withTemplateFunc = styled => (...props) => withCss(styled(...props));

@@ -19,8 +19,7 @@ Quicklinks to some of the most-visited pages:
 - [Migrate](#migrate)
 
 ## Important
-Based on <font color=#0e59d8>750px</font> design draft. <br>
-Currently incompatible with the official babel-plugin-styled-components plugin.
+Based on <font color=#0e59d8>750px</font> design draft.
 
 ## Motivation
 Styled-px2vw mainly solves the problem of screen adaptation of multiple device sizes on mobile, The size of mobile devices is various, The current popular solution is to use vw units, Unfortunately, styled-components does not support this feature, so we developed the styled-px2vw component to solve the adaptation problem, Of course, there may be many problems in this, I hope that developers join together to optimize styled-px2vw, together to create a better front-end ecosystem.

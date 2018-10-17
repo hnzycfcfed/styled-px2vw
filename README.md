@@ -1,9 +1,10 @@
 # styled-px2vw ✨
-[![Build Status](https://img.shields.io/travis/sergeybekrin/styled-px2vw.svg)](https://travis-ci.org/sergeybekrin/styled-px2vw)
-[![npm Version](https://img.shields.io/npm/v/styled-px2vw.svg)](https://www.npmjs.com/package/styled-px2vw)
-[![NPM Downloads](https://img.shields.io/npm/dm/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
-[![dependencies Status](https://img.shields.io/david/sergeybekrin/styled-px2vw.svg)](https://david-dm.org/sergeybekrin/styled-px2vw)
-[![devDependencies Status](https://img.shields.io/david/dev/sergeybekrin/styled-px2vw.svg)](https://david-dm.org/sergeybekrin/styled-px2vw?type=dev)
+[![Build Status](https://travis-ci.com/hnzycfcfed/styled-px2vw.svg?branch=master)](https://travis-ci.com/hnzycfcfed/styled-px2vw)
+[![npm Version](https://flat.badgen.net/npm/v/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
+[![NPM Downloads](https://flat.badgen.net/npm/dw/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
+[![dependencies Status](https://flat.badgen.net/david/dep/hnzycfcfed/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
+[![devDependencies Status](https://flat.badgen.net/david/dep/hnzycfcfed/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
+[![Github stars](https://flat.badgen.net/github/stars/hnzycfcfed/styled-px2vw)](https://github.com/hnzycfcfed/styled-px2vw)
 
 Extension of [styled-components](https://www.styled-components.com/) with features for convert px to vw units. <br>
 See the documentation at [styled-components.com/docs](https://www.styled-components.com/docs) for more information about using styled-components!

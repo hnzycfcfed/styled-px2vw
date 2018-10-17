@@ -1,0 +1,54 @@
+{
+    "name": "styled-px2vw",
+    "version": "1.0.0",
+    "description": "Extension of styled-components with features for convert px to vw units",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -c -w",
+        "pub": "NODE_ENV=production rollup -c && npm publish"
+    },
+    "author": "Daniel Zhao",
+    "keywords": [
+        "px2vw",
+        "styled-px2vw",
+        "styled-components",
+        "react",
+        "frontend"
+      ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hnzycfcfed/styled-px2vw"
+    },
+    "bugs": {
+        "url": "https://github.com/hnzycfcfed/styled-px2vw/issues",
+        "email": "zhaodong89@163.com"
+    },
+    "license": "MIT",
+    "files": [
+        "dist",
+        "lib",
+        "es"
+    ],
+    "dependencies": {
+        "styled-components": "^4.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.0.0",
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-transform-remove-console": "^6.9.4",
+        "eslint": "^5.7.0",
+        "eslint-plugin-babel": "^5.2.1",
+        "eslint-plugin-import": "^2.14.0",
+        "rollup": "^0.66.6",
+        "rollup-plugin-babel": "^4.0.1",
+        "rollup-plugin-commonjs": "^9.2.0",
+        "rollup-plugin-eslint": "^5.0.0",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-uglify": "^6.0.0"
+    }
+}

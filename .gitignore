@@ -1,0 +1,22 @@
+# Mac
+.DS_Store
+
+# vscode
+.vscode/.react/
+
+# JetBrains
+.idea
+
+# node.js
+/node_modules
+npm-debug.log
+package-lock.json
+
+# yarn
+yarn.lock
+yarn-debug.log*
+yarn-error.log*
+
+/dist
+/es
+/lib

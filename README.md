@@ -1,5 +1,5 @@
 # styled-px2vw ✨
-[![Travis (.com)](https://img.shields.io/travis/com/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://travis-ci.com/hnzycfcfed/styled-px2vw)
+[![Travis (.org)](https://img.shields.io/travis/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://travis-ci.com/hnzycfcfed/styled-px2vw)
 [![npm](https://img.shields.io/npm/v/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
 [![npm](https://img.shields.io/npm/dw/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
 [![David](https://img.shields.io/david/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)

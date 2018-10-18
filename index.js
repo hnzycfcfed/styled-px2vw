@@ -47,7 +47,7 @@ const withCss = styled => {
 
 const withTemplateFunc = styled => (...props) => withCss(styled(...props));
 
-const styledPx2vw = (styled) => {
+const styledPx2vw = ((styled) => {
     const obj = withTemplateFunc(styled);
 
     Object.keys(styled).forEach(key => {
@@ -57,8 +57,8 @@ const styledPx2vw = (styled) => {
     });
 
     return obj;
-};
+})(styled);
 
-export default styledPx2vw(styled);
+export default styledPx2vw;
 export { px2vw };
 export * from 'styled-components';

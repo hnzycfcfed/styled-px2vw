@@ -40,7 +40,7 @@ const withCss = styled => {
         return styled(strings, ...interpolations);
     }
 
-    Object.keys(styled).forEach(prop => interleave[prop] = styled[prop]);
+    Object.keys(styled).forEach(prop => interleave[prop] = withTemplateFunc(styled[prop]));
 
     return interleave;
 };
@@ -61,3 +61,4 @@ const styledPx2vw = (styled) => {
 
 export default styledPx2vw(styled);
 export { px2vw };
+export * from 'styled-components';

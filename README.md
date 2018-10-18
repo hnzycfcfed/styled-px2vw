@@ -1,10 +1,10 @@
 # styled-px2vw ✨
-[![Build Status](https://travis-ci.com/hnzycfcfed/styled-px2vw.svg?branch=master)](https://travis-ci.com/hnzycfcfed/styled-px2vw)
-[![npm Version](https://flat.badgen.net/npm/v/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
-[![NPM Downloads](https://flat.badgen.net/npm/dw/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
-[![dependencies Status](https://flat.badgen.net/david/dep/hnzycfcfed/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
-[![devDependencies Status](https://flat.badgen.net/david/dep/hnzycfcfed/styled-px2vw)](https://www.npmjs.com/package/styled-px2vw)
-[![Github stars](https://flat.badgen.net/github/stars/hnzycfcfed/styled-px2vw)](https://github.com/hnzycfcfed/styled-px2vw)
+[![Travis (.com)](https://img.shields.io/travis/com/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://travis-ci.com/hnzycfcfed/styled-px2vw)
+[![npm](https://img.shields.io/npm/v/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
+[![npm](https://img.shields.io/npm/dw/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
+[![David](https://img.shields.io/david/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
+[![David](https://img.shields.io/david/dev/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
+[![GitHub stars](https://img.shields.io/github/stars/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://github.com/hnzycfcfed/styled-px2vw/stargazers)
 
 Extension of [styled-components](https://www.styled-components.com/) with features for convert px to vw units. <br>
 See the documentation at [styled-components.com/docs](https://www.styled-components.com/docs) for more information about using styled-components!
@@ -55,7 +55,7 @@ Screenshot
 Just change styled-components to styled-px2vw
 
 ```javascript
-import styled from 'styled-components';
+import styled, { createGlobalStyle,... } from 'styled-components';
 
 const Button = styled.button`
   color: white;
@@ -68,7 +68,7 @@ const Button = styled.button`
 ```
 to
 ```javascript
-import styled from 'styled-px2vw';
+import styled, { createGlobalStyle,... } from 'styled-px2vw';
 
 const Button = styled.button`
   color: white;

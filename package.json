@@ -4,6 +4,7 @@
     "description": "Extension of styled-components with features for convert px to vw units",
     "main": "lib/index.js",
     "module": "es/index.js",
+    "typings": "index.d.ts",
     "scripts": {
         "build": "rollup -c",
         "watch": "rollup -c -w",
@@ -32,7 +33,8 @@
     "files": [
         "dist",
         "lib",
-        "es"
+        "es",
+        "index.d.ts"
     ],
     "dependencies": {
         "styled-components": "^4.0.0"
@@ -42,6 +44,7 @@
         "@babel/core": "^7.0.0",
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
         "@babel/preset-env": "^7.0.0",
+        "@types/styled-components": "^4.0.3",
         "babel-eslint": "^10.0.1",
         "babel-plugin-transform-remove-console": "^6.9.4",
         "eslint": "^5.7.0",

@@ -5,7 +5,24 @@ const base64Re = /^data:\w+\/[a-zA-Z+\-.]+;base64,/i;
 
 const px2vw = px => Number(px) ? `${Math.round(Number(px) / 7.5 * 100000) / 100000}vw` : 0;
 
-const convertStringPx2vw = style => style.replace(pxRe, value => px2vw(value.replace('px', '')));
+const convertStringPx2vw = style => {
+    if (!style) return style;
+
+    if (Object.prototype.toString.call(style) === '[object Object]'
+        && style.constructor.name === 'Keyframes') {
+
+        style.rules = style.rules.map(convertStringPx2vw);
+        return style;
+    } else if (
+        !base64Re.test(style)   // 非base64字符串
+        && pxRe.test(style)     // 包含px单位
+    ) {
+
+        return style.replace(pxRe, value => px2vw(value.replace('px', '')))
+    }
+
+    return style;
+}
 
 const convertInterpolationPx2vw = interpolation => {
     if (typeof interpolation !== 'function') return interpolation;
@@ -13,17 +30,12 @@ const convertInterpolationPx2vw = interpolation => {
     return props => {
         const result = interpolation(props);
 
-        if (result
-            && !base64Re.test(result)    // 非base64字符串
-            && pxRe.test(result)) {      // 包含px单位
+        if (typeof result === 'string') {
+            return convertStringPx2vw(result);
+        }
 
-            if (typeof result === 'string') {
-                return convertStringPx2vw(result);
-            }
-
-            if (Array.isArray(result)) {
-                return result.map(convertStringPx2vw);
-            }
+        if (Array.isArray(result)) {
+            return result.map(convertStringPx2vw);
         }
 
         return result;

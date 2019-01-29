@@ -8,12 +8,7 @@ const px2vw = px => Number(px) ? `${Math.round(Number(px) / 7.5 * 100000) / 1000
 const convertStringPx2vw = style => {
     if (!style) return style;
 
-    if (Object.prototype.toString.call(style) === '[object Object]'
-        && style.constructor.name === 'Keyframes') {
-
-        style.rules = style.rules.map(convertStringPx2vw);
-        return style;
-    } else if (
+    if (
         !base64Re.test(style)   // 非base64字符串
         && pxRe.test(style)     // 包含px单位
     ) {
@@ -25,7 +20,15 @@ const convertStringPx2vw = style => {
 }
 
 const convertInterpolationPx2vw = interpolation => {
-    if (typeof interpolation !== 'function') return interpolation;
+    if (Object.prototype.toString.call(interpolation) === '[object Object]'
+        && interpolation.constructor.name === 'Keyframes') {
+
+        interpolation.rules = interpolation.rules.map(convertStringPx2vw);
+
+        return interpolation;
+    } else if (typeof interpolation !== 'function') {
+        return interpolation;
+    }
 
     return props => {
         const result = interpolation(props);

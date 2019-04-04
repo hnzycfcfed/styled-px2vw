@@ -6,35 +6,33 @@
 [![David](https://img.shields.io/david/dev/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://www.npmjs.com/package/styled-px2vw)
 [![GitHub stars](https://img.shields.io/github/stars/hnzycfcfed/styled-px2vw.svg?style=flat-square)](https://github.com/hnzycfcfed/styled-px2vw/stargazers)
 
-English | [简体中文](./README-zh_CN.md)
+在 [styled-components](https://www.styled-components.com/) 基础上实现了 px -> vw 单位转换的功能 <br>
+详细文档请参考： [styled-components.com/docs](https://www.styled-components.com/docs)
 
-Extension of [styled-components](https://www.styled-components.com/) with features for convert px to vw units. <br>
-See the documentation at [styled-components.com/docs](https://www.styled-components.com/docs) for more information about using styled-components!
-
-Quicklinks to some of the most-visited pages:
+快速访问:
 
 - [styled-px2vw ✨](#styled-px2vw-%E2%9C%A8)
-  - [Important](#important)
-  - [Motivation](#motivation)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Example](#example)
-  - [Migrate](#migrate)
+  - [重要提示](#%E9%87%8D%E8%A6%81%E6%8F%90%E7%A4%BA)
+  - [动机](#%E5%8A%A8%E6%9C%BA)
+  - [特性](#%E7%89%B9%E6%80%A7)
+  - [安装](#%E5%AE%89%E8%A3%85)
+  - [示例](#%E7%A4%BA%E4%BE%8B)
+  - [迁移](#%E8%BF%81%E7%A7%BB)
   - [License](#license)
 
-## Important
-Based on <font color=#0e59d8>750px</font> design draft.
+## 重要提示
+以 <font color=#0e59d8>750px</font> 设计稿为基准.
 
-## Motivation
-Styled-px2vw mainly solves the problem of screen adaptation of multiple device sizes on mobile, The size of mobile devices is various, The current popular solution is to use vw units, Unfortunately, styled-components does not support this feature, so we developed the styled-px2vw component to solve the adaptation problem, Of course, there may be many problems in this, I hope that developers join together to optimize styled-px2vw, together to create a better front-end ecosystem.
+## 动机
+styled-px2vw 主要为解决移动设备上多种屏幕尺寸的适配问题，移动设备的尺寸各不相同，目前流行的解决方案是使用 vw 单位，但是目前 styled-components 不支持这个功能，所以我们开发了 styled-px2vw 组件来解决适配问题，当然，这可能还存在很多问题，希望开发人员一起来优化 styled-px2vw，共同创造更好的前端生态系统。
 
-## Features
-- Suitable for mobile phones
-- Supports [Adapting based on props](https://www.styled-components.com/docs/basics#adapting-based-on-props)
-- Supports [Extending Styles](https://www.styled-components.com/docs/basics#extending-styles)
-- Supports [.attrs constructor](https://www.styled-components.com/docs/api#attrs)
+## 特性
+- 适用于移动端
+- 支持 [props 属性](https://www.styled-components.com/docs/basics#adapting-based-on-props)
+- 支持 [继承样式](https://www.styled-components.com/docs/basics#extending-styles)
+- 支持 [.attrs 构造](https://www.styled-components.com/docs/api#attrs)
 
-## Installation
+## 安装
 yarn:
 ```
 yarn add styled-px2vw
@@ -44,7 +42,7 @@ npm:
 npm i --save styled-px2vw
 ```
 
-## Example
+## 示例
 ![style](/docs/images/style.png)
 
 Output
@@ -55,8 +53,8 @@ Screenshot
 
 ![screenshot](/docs/screenshot/screenshot.png)
 
-## Migrate
-Just change styled-components to styled-px2vw
+## 迁移
+只需要修改 styled-components -> @zycfc/styled-px2vw 的导入即可
 
 ```javascript
 import styled, { createGlobalStyle,... } from 'styled-components';
@@ -72,7 +70,7 @@ const Button = styled.button`
 ```
 to
 ```javascript
-import styled, { createGlobalStyle,... } from 'styled-px2vw';
+import styled, { createGlobalStyle,... } from '@zycfc/styled-px2vw';
 
 const Button = styled.button`
   color: white;

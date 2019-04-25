@@ -54,7 +54,7 @@ Screenshot
 ![screenshot](/docs/screenshot/screenshot.png)
 
 ## 迁移
-只需要修改 styled-components -> @zycfc/styled-px2vw 的导入即可
+只需要修改 styled-components -> styled-px2vw 的导入即可
 
 ```javascript
 import styled, { createGlobalStyle,... } from 'styled-components';
@@ -70,7 +70,7 @@ const Button = styled.button`
 ```
 to
 ```javascript
-import styled, { createGlobalStyle,... } from '@zycfc/styled-px2vw';
+import styled, { createGlobalStyle,... } from 'styled-px2vw';
 
 const Button = styled.button`
   color: white;

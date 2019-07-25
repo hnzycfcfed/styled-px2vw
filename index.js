@@ -8,12 +8,7 @@ const px2vw = px => Number(px) ? `${Math.round(Number(px) / 7.5 * 100000) / 1000
 const convertStringPx2vw = style => {
     if (!style) return style;
 
-    if (Object.prototype.toString.call(style) === '[object Object]'
-        && style.constructor.name === 'Keyframes') {
-
-        style.rules = style.rules.map(convertStringPx2vw);
-        return style;
-    } else if (
+    if (
         !base64Re.test(style)   // 非base64字符串
         && pxRe.test(style)     // 包含px单位
     ) {
@@ -24,22 +19,34 @@ const convertStringPx2vw = style => {
     return style;
 }
 
+const isKeyframes = interpolation => Object.prototype.toString.call(interpolation) === '[object Object]'
+    && interpolation.constructor.name === 'Keyframes';
+
+const convertKeyframesPx2vw = keyframes => {
+    keyframes.rules = keyframes.rules.map(convertStringPx2vw);
+
+    return keyframes;
+};
+
 const convertInterpolationPx2vw = interpolation => {
-    if (typeof interpolation !== 'function') return interpolation;
+    if (typeof interpolation === 'string') {
+        return convertStringPx2vw(interpolation);
+    }
 
-    return props => {
-        const result = interpolation(props);
+    if (isKeyframes(interpolation)) {
+        return convertKeyframesPx2vw(interpolation);
+    }
 
-        if (typeof result === 'string') {
-            return convertStringPx2vw(result);
-        }
+    if (Array.isArray(interpolation)) {
+        return interpolation.map(convertInterpolationPx2vw);
+    }
 
-        if (Array.isArray(result)) {
-            return result.map(convertStringPx2vw);
-        }
+    if (typeof interpolation === 'function') {
+        return props => convertInterpolationPx2vw(interpolation(props))
+    }
 
-        return result;
-    };
+    return interpolation;
+
 };
 
 const withCss = styled => {

@@ -26,6 +26,9 @@ module.exports = {
         'no-useless-escape': 1,
         'no-extra-boolean-cast': 0,
         'no-console': 0,
-        'no-constant-condition': 0
+        'no-constant-condition': 0,
+        'no-import-assign': 0,
+        'no-setter-return': 0,
+        'no-dupe-else-if': 0
     }
 }

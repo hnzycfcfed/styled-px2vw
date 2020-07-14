@@ -23,7 +23,7 @@ const isKeyframes = interpolation => Object.prototype.toString.call(interpolatio
     && interpolation.constructor.name === 'Keyframes';
 
 const convertKeyframesPx2vw = keyframes => {
-    keyframes.rules = keyframes.rules.map(convertStringPx2vw);
+    keyframes.stringifyArgs = keyframes.stringifyArgs.map(convertStringPx2vw);
 
     return keyframes;
 };

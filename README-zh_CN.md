@@ -82,6 +82,15 @@ const Button = styled.button`
 `;
 ```
 
+## 设置Unit
+一个 unit 对应 1vw 所对应的视觉稿像素。注意，这需要在实际 import 组件前调用。
+```javascript
+import { init } from 'styled-px2vw';
+init({
+  unit: 3.75
+})
+```
+
 ## License
 
 Licensed under the MIT License, Copyright © 2018-present hnzycfc.com, https://www.hnzycfc.com/

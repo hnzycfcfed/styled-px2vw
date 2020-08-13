@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const pxRe = /-?\d*[.\d]*px/g;
 const base64Re = /^data:\w+\/[a-zA-Z+\-.]+;base64,/i;
 
-const px2vw = px => Number(px) ? `${Math.round(Number(px) / 7.5 * 100000) / 100000}vw` : 0;
+let _config = { unit: 7.5 }
+const px2vw = px => Number(px) ? `${Math.round(Number(px) / _config.unit * 100000) / 100000}vw` : 0;
 
 const convertStringPx2vw = style => {
     if (!style) return style;
@@ -78,6 +79,13 @@ const styledPx2vw = ((styled) => {
     return obj;
 })(styled);
 
+const init = (config = {}) => {
+    Object.keys(config).forEach(key => {
+        _config[key] = config[key]
+    })
+}
+
 export default styledPx2vw;
-export { px2vw };
+export { px2vw, init };
 export * from 'styled-components';
+

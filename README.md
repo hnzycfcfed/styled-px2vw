@@ -84,6 +84,15 @@ const Button = styled.button`
 `;
 ```
 
+## Set Unit
+A unit corresponds to the visual draft pixel corresponding to 1vw. Note that this needs to be called before actually importing the component.
+```javascript
+import { init } from 'styled-px2vw';
+init({
+  unit: 3.75
+})
+```
+
 ## License
 
 Licensed under the MIT License, Copyright © 2018-present hnzycfc.com, https://www.hnzycfc.com/
